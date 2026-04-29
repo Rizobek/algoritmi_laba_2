@@ -33,24 +33,24 @@ def save_raw(img: Image.Image, filename: str, colorspace: int=0):
         f.write(struct.pack("I", h))
         f.write(data)
 
-img = Image.open("test_files/image_gray.png")
-save_raw(img, "test_files/image_gray.raw")
+#img = Image.open("test_files/image_gray.png")
+#save_raw(img, "test_files/image_gray.raw")
 
-def size(path):
-    return os.path.getsize(path)
+#def size(path):
+#    return os.path.getsize(path)
 
-raw = "test_files/image_gray.raw"
-orig = "test_files/image_gray.png"
-raw_size = size(raw)
-orig_size = size(orig)
+#raw = "test_files/image_gray.raw"
+#orig = "test_files/image_gray.png"
+#raw_size = size(raw)
+#orig_size = size(orig)
 
-print("RAW:", raw_size)
-print("orig:", orig_size)
-print("Коэффициент:", raw_size/orig_size)
+#print("RAW:", raw_size)
+#print("orig:", orig_size)
+#print("Коэффициент:", raw_size/orig_size)
 
-with open("lena_ycbcr.raw", "rb") as f:
-    header = f.read(10)
-    print(list(header))
+#with open("lena_ycbcr.raw", "rb") as f:
+#    header = f.read(10)
+#    print(list(header))
 
 
 from PIL import Image
